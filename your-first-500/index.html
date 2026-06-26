@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your First $500 Online — The Side Hustle Starter Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:      #0A1628;
+    --navy-mid:  #1A2F52;
+    --green:     #00C851;
+    --green-bg:  #E8FFF0;
+    --green-drk: #006B2B;
+    --gold:      #FFB830;
+    --gold-bg:   #FFF8E7;
+    --gold-drk:  #7A4F00;
+    --coral:     #FF6B6B;
+    --coral-bg:  #FFF0F0;
+    --teal:      #00BCD4;
+    --teal-bg:   #E8F8FB;
+    --orange:    #FF9500;
+    --orange-bg: #FFF5E6;
+    --warm:      #FDFCFB;
+    --light:     #F4F6FA;
+    --border:    #DDE3EE;
+    --body:      #1A1A2E;
+    --muted:     #5A6A8A;
+    --white:     #FFFFFF;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--warm);
+    color: var(--body);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Sora', system-ui, sans-serif;
+    line-height: 1.15;
+    font-weight: 800;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 11px 20px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .topbar .accent { color: var(--green); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--warm);
+    padding: 72px 20px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, var(--green), var(--teal), var(--gold), var(--coral), var(--orange));
+  }
+  .eyebrow {
+    display: inline-block;
+    background: var(--green-bg);
+    border: 1.5px solid var(--green);
+    border-radius: 100px;
+    padding: 6px 18px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-drk);
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    color: var(--navy);
+    max-width: 780px;
+    margin: 0 auto 20px;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 .dollar {
+    color: var(--green);
+    position: relative;
+    display: inline-block;
+  }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  /* ── STAT PILLS ── */
+  .stat-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 44px;
+  }
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    padding: 10px 20px;
+  }
+  .stat-num {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  .stat-pill.green .stat-num  { color: var(--green); }
+  .stat-pill.gold  .stat-num  { color: var(--gold-drk); }
+  .stat-pill.coral .stat-num  { color: var(--coral); }
+
+  /* ── CTA BUTTON ── */
+  .btn-primary {
+    display: inline-block;
+    background: var(--green);
+    color: var(--navy);
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 18px 42px;
+    border-radius: 10px;
+    letter-spacing: -0.01em;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,200,81,0.28);
+  }
+  .btn-sub {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section { padding: 72px 20px; }
+  .container { max-width: 860px; margin: 0 auto; }
+  .section-label {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    color: var(--navy);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+  .section-body {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 620px;
+    line-height: 1.75;
+    margin-bottom: 40px;
+  }
+
+  /* ── PAIN SECTION ── */
+  .pain { background: var(--navy); padding: 72px 20px; }
+  .pain .section-label { color: rgba(255,255,255,0.4); }
+  .pain .section-title { color: var(--white); }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .pain-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .pain-card .icon {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .pain-card h4 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .pain-card p { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+  .pain-bottom {
+    margin-top: 48px;
+    text-align: center;
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.4;
+  }
+  .pain-bottom .hi { color: var(--green); }
+
+  /* ── METHODS ── */
+  .methods { background: var(--warm); }
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .method-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .method-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    border-radius: 14px 14px 0 0;
+  }
+  .m1::before { background: var(--green); }
+  .m2::before { background: var(--coral); }
+  .m3::before { background: var(--gold); }
+  .m4::before { background: var(--teal); }
+  .m5::before { background: var(--orange); }
+  .method-tag {
+    font-family: 'Sora', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .m1 .method-tag { color: var(--green-drk); }
+  .m2 .method-tag { color: #8B1A1A; }
+  .m3 .method-tag { color: var(--gold-drk); }
+  .m4 .method-tag { color: #006080; }
+  .m5 .method-tag { color: #7A3A00; }
+  .method-card h3 {
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .method-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+  .method-speed {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: var(--light);
+    color: var(--muted);
+  }
+
+  /* ── WHATS INSIDE ── */
+  .inside { background: var(--light); }
+  .inside-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 40px;
+  }
+  .inside-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .inside-num {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--green);
+    line-height: 1;
+    min-width: 36px;
+  }
+  .inside-card h4 {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 5px;
+  }
+  .inside-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+  /* ── BONUS SECTION ── */
+  .bonus { background: var(--navy); padding: 56px 20px; }
+  .bonus-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bonus-label {
+    display: inline-block;
+    background: rgba(0,200,81,0.15);
+    border: 1px solid rgba(0,200,81,0.3);
+    border-radius: 100px;
+    padding: 5px 16px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 20px;
+  }
+  .bonus h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .bonus p { color: rgba(255,255,255,0.55); font-size: 1rem; margin-bottom: 28px; }
+  .bonus-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+  }
+  .bonus-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .bonus-dot {
+    width: 10px; height: 10px;
+    background: var(--green);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .bonus-item span {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+  .bonus-item strong { color: var(--white); }
+
+  /* ── FOR WHO ── */
+  .forwho { background: var(--warm); }
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 36px;
+  }
+  .who-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 18px;
+    text-align: center;
+  }
+  .who-emoji { font-size: 1.8rem; margin-bottom: 10px; }
+  .who-card h4 {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 5px;
+  }
+  .who-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.55; }
+
+  /* ── PRICING ── */
+  .pricing { background: var(--light); padding: 80px 20px; }
+  .price-box {
+    max-width: 520px;
+    margin: 0 auto;
+    background: var(--white);
+    border: 2px solid var(--green);
+    border-radius: 20px;
+    padding: 48px 40px;
+    text-align: center;
+    box-shadow: 0 12px 48px rgba(0,200,81,0.12);
+  }
+  .price-eyebrow {
+    font-family: 'Sora', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .price-num {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: 6px;
+  }
+  .price-num sup { font-size: 1.8rem; vertical-align: top; margin-top: 10px; }
+  .price-desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .price-includes {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .price-includes li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--body);
+  }
+  .check-icon {
+    width: 22px; height: 22px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: var(--white);
+    font-weight: 800;
+  }
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta { background: var(--navy); padding: 80px 20px; text-align: center; }
+  .final-cta h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--white);
+    max-width: 620px;
+    margin: 0 auto 16px;
+    letter-spacing: -0.02em;
+  }
+  .final-cta h2 .hi { color: var(--green); }
+  .final-cta p {
+    color: rgba(255,255,255,0.5);
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 28px 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.8;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero { padding: 56px 20px 48px; }
+    .price-box { padding: 36px 24px; }
+    .price-num { font-size: 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span class="accent">NEW</span> &nbsp;Your First $500 Online — The Side Hustle Starter Guide &nbsp;<span class="accent">$27</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">5 proven methods &nbsp;·&nbsp; zero startup cost &nbsp;·&nbsp; 30 days</div>
+    <h1>Make Your First <span class="dollar">$500</span> Online — Starting This Week</h1>
+    <p class="hero-sub">A plain-English guide to making your first $500 on the internet. Pick one method, follow the plan, and get there in 30 days or less. No experience required.</p>
+
+    <div class="stat-row">
+      <div class="stat-pill green">
+        <div>
+          <div class="stat-num">$500</div>
+          <div class="stat-label">your first goal</div>
+        </div>
+      </div>
+      <div class="stat-pill gold">
+        <div>
+          <div class="stat-num">$0</div>
+          <div class="stat-label">startup cost</div>
+        </div>
+      </div>
+      <div class="stat-pill coral">
+        <div>
+          <div class="stat-num">5</div>
+          <div class="stat-label">proven methods</div>
+        </div>
+      </div>
+      <div class="stat-pill" style="--stat-c:#00BCD4;">
+        <div>
+          <div class="stat-num" style="color:#006080;">30</div>
+          <div class="stat-label">days or less</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://payhip.com/b/OYJcC" target="_blank" rel="noopener" class="btn-primary">
+      Get Instant Access — $27
+    </a>
+    <p class="btn-sub">Instant download &nbsp;·&nbsp; PDF guide + action plan + interactive checklist &nbsp;·&nbsp; Yours forever</p>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="container">
+    <div class="section-label">Sound familiar?</div>
+    <h2 class="section-title" style="color:var(--white); font-size:clamp(1.6rem,3.5vw,2.3rem); margin-bottom:0;">Most people want extra income.<br>They just never know where to start.</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="icon">🔍</div>
+        <h4>Too many options</h4>
+        <p>Everyone is selling a different idea. Dropshipping, crypto, content creation — you research everything and start nothing.</p>
+      </div>
+      <div class="pain-card">
+        <div class="icon">💸</div>
+        <h4>No startup money</h4>
+        <p>Most "make money" guides assume you have cash to invest. You need something that works with exactly what you have right now.</p>
+      </div>
+      <div class="pain-card">
+        <div class="icon">⏱</div>
+        <h4>No extra time</h4>
+        <p>You have a job, a family, a life. You need a side hustle that fits in 1-2 hours a day — not a second full-time commitment.</p>
+      </div>
+      <div class="pain-card">
+        <div class="icon">❓</div>
+        <h4>No idea where to start</h4>
+        <p>You know you want more income. But nobody has given you a clear, honest, step-by-step plan that is built for real people.</p>
+      </div>
+    </div>
+    <div class="pain-bottom">
+      This guide is the plan<br>you have been looking for.<br>
+      <span class="hi">One method. Thirty days. Five hundred dollars.</span>
+    </div>
+  </div>
+</section>
+
+<!-- METHODS -->
+<section class="section methods">
+  <div class="container">
+    <div class="section-label">Choose your path</div>
+    <h2 class="section-title">5 Methods. Pick the One That Fits Your Life.</h2>
+    <p class="section-body">You do not need all five. You need one. Every method in this guide works with zero startup money and zero prior experience. Pick the one that matches where you are right now.</p>
+    <div class="method-grid">
+      <div class="method-card m1">
+        <div class="method-tag">Method 01</div>
+        <h3>Sell What You Already Know</h3>
+        <p>Turn your expertise into consulting calls, coaching sessions, and done-for-you services. You are paid directly for your knowledge and time.</p>
+        <span class="method-speed">First $ in 1–2 weeks</span>
+      </div>
+      <div class="method-card m2">
+        <div class="method-tag">Method 02</div>
+        <h3>Freelance Your Skills</h3>
+        <p>Get paid for professional project work — writing, design, VA, bookkeeping. Skilled work on Fiverr and Upwork that pays significantly more than task work.</p>
+        <span class="method-speed">First $ in 3–7 days</span>
+      </div>
+      <div class="method-card m3">
+        <div class="method-tag">Method 03</div>
+        <h3>Flip and Resell for Fast Cash</h3>
+        <p>Buy underpriced items and resell at a profit on Facebook Marketplace, eBay, and Poshmark. Start today with things already in your home.</p>
+        <span class="method-speed">First $ same day</span>
+      </div>
+      <div class="method-card m4">
+        <div class="method-tag">Method 04</div>
+        <h3>Create a Digital Product</h3>
+        <p>Build a PDF guide, template, or printable once and sell it forever with zero additional effort. The highest-leverage method on this list.</p>
+        <span class="method-speed">First $ in 1–4 weeks</span>
+      </div>
+      <div class="method-card m5">
+        <div class="method-tag">Method 05</div>
+        <h3>Get Paid for Tasks Online</h3>
+        <p>User testing, surveys, micro-tasks, and data labeling. No skill, no portfolio, no pitch required. The easiest entry point — start earning today.</p>
+        <span class="method-speed">First $ today</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section inside">
+  <div class="container">
+    <div class="section-label">Inside the guide</div>
+    <h2 class="section-title">Everything You Need. Nothing You Do Not.</h2>
+    <p class="section-body">Six modules built around one goal — getting you to your first $500 as fast as possible, with the clearest possible instructions.</p>
+    <div class="inside-grid">
+      <div class="inside-card">
+        <div class="inside-num">01</div>
+        <div>
+          <h4>Sell What You Know</h4>
+          <p>Consulting, coaching, and done-for-you services. Turn your expertise into direct income.</p>
+        </div>
+      </div>
+      <div class="inside-card">
+        <div class="inside-num">02</div>
+        <div>
+          <h4>Freelance Your Skills</h4>
+          <p>How to set up on Fiverr, Upwork, and LinkedIn and land your first paying client fast.</p>
+        </div>
+      </div>
+      <div class="inside-card">
+        <div class="inside-num">03</div>
+        <div>
+          <h4>Flip and Resell</h4>
+          <p>Where to find inventory, how to price it, and which platforms move it fastest.</p>
+        </div>
+      </div>
+      <div class="inside-card">
+        <div class="inside-num">04</div>
+        <div>
+          <h4>Digital Products</h4>
+          <p>How to create a PDF or template, where to sell it, and how to drive traffic for free.</p>
+        </div>
+      </div>
+      <div class="inside-card">
+        <div class="inside-num">05</div>
+        <div>
+          <h4>Online Tasks</h4>
+          <p>The best platforms for user testing, surveys, and micro-tasks — ranked by pay and availability.</p>
+        </div>
+      </div>
+      <div class="inside-card">
+        <div class="inside-num">06</div>
+        <div>
+          <h4>30-Day Action Plan</h4>
+          <p>A day-by-day calendar. Day 1 through Day 30. No guesswork. Just follow the plan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section class="bonus">
+  <div class="bonus-inner">
+    <div class="bonus-label">Also included</div>
+    <h2>Three Files. One Complete System.</h2>
+    <p>Your download includes everything you need to read, plan, and take action — not just a PDF.</p>
+    <div class="bonus-items">
+      <div class="bonus-item">
+        <div class="bonus-dot"></div>
+        <span><strong>PDF Guide</strong> — 24 pages covering all 5 methods with step-by-step instructions, income tables, platform comparisons, and action steps throughout</span>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-dot" style="background:var(--gold);"></div>
+        <span><strong>30-Day Action Plan Worksheet</strong> — A fillable PDF to track competitor research, pricing, weekly income, and lessons learned as you work through the guide</span>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-dot" style="background:var(--teal);"></div>
+        <span><strong>Interactive Quick-Start Checklist</strong> — An HTML file you open in any browser, check items off as you complete them, and track your progress through the first 7 days</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="section forwho">
+  <div class="container">
+    <div class="section-label">Who this is for</div>
+    <h2 class="section-title">If You Have 1–2 Hours a Day, One of These Methods Will Work for You.</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-emoji">👩‍💼</div>
+        <h4>9-to-5 Workers</h4>
+        <p>Build income outside your job without quitting or burning out.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-emoji">🏠</div>
+        <h4>Stay-at-Home Parents</h4>
+        <p>Methods that work around your schedule, not a boss's calendar.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-emoji">🎓</div>
+        <h4>Students</h4>
+        <p>Start building income with the skills and knowledge you already have.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-emoji">💼</div>
+        <h4>Freelancers</h4>
+        <p>Add a second income stream that does not depend on finding clients.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-emoji">🔄</div>
+        <h4>Career Changers</h4>
+        <p>Build a financial cushion before you make the leap.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-emoji">🌱</div>
+        <h4>Complete Beginners</h4>
+        <p>No experience needed. One of these five methods starts from zero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:40px;">
+      <div class="section-label">Simple pricing</div>
+      <h2 class="section-title">One payment. Everything included.</h2>
+    </div>
+    <div class="price-box">
+      <div class="price-eyebrow">Your First $500 Online — Complete Bundle</div>
+      <div class="price-num"><sup>$</sup>27</div>
+      <div class="price-desc">One-time payment &nbsp;·&nbsp; Instant download &nbsp;·&nbsp; Yours forever</div>
+      <ul class="price-includes">
+        <li><div class="check-icon">✓</div> 24-page PDF Side Hustle Starter Guide</li>
+        <li><div class="check-icon">✓</div> Fillable 30-Day Action Plan Worksheet</li>
+        <li><div class="check-icon">✓</div> Interactive HTML Quick-Start Checklist</li>
+        <li><div class="check-icon">✓</div> 5 proven methods, zero startup cost</li>
+        <li><div class="check-icon">✓</div> Day-by-day 30-day action calendar</li>
+        <li><div class="check-icon">✓</div> Platform comparisons and income tables</li>
+      </ul>
+      <a href="https://payhip.com/b/OYJcC" target="_blank" rel="noopener" class="btn-primary" style="width:100%; display:block; text-align:center;">
+        Get Instant Access — $27
+      </a>
+      <p class="price-note">
+        Secure checkout via Payhip &nbsp;·&nbsp; Stripe &amp; PayPal accepted<br>
+        Income figures in this guide represent realistic potential and are not guarantees of earnings. Results vary.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Most people never start.<br><span class="hi">You just did.</span></h2>
+    <p>Your first $500 is not a question of if. It is a question of when.</p>
+    <a href="https://payhip.com/b/OYJcC" target="_blank" rel="noopener" class="btn-primary">
+      Get Instant Access — $27
+    </a>
+    <p class="btn-sub" style="color:rgba(255,255,255,0.35); margin-top:12px;">Instant download &nbsp;·&nbsp; One-time payment &nbsp;·&nbsp; Yours forever</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>Digital Drop Vault &nbsp;·&nbsp; <a href="https://digitaldropvault.com" style="color:rgba(255,255,255,0.4);">digitaldropvault.com</a></div>
+  <div style="margin-top:6px;">Income figures represent realistic potential and are not guarantees of earnings. Results vary based on individual effort, skill, and market conditions.</div>
+</footer>
+
+</body>
+</html>
